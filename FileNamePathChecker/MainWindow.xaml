@@ -1,0 +1,36 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Filename Path Checker"
+        FontFamily="Trebuchet MS"
+        FontSize="14"
+        FontWeight="Regular"
+        FlowDirection="LeftToRight"
+        WindowState="Normal"
+        WindowStartupLocation="CenterScreen"
+        Width="800"
+        Height="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <Label Content="Filename '-Path' Checker" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" />
+            <Label Content="You can check in the folder that if there are exist both filename and filename+'-Path'." HorizontalAlignment="Center" />
+            <Label />
+            <Label Content="Version 1.0.0.0" HorizontalAlignment="Center" />
+            <Label Content="Created by: Mohammad  Gol ara" HorizontalAlignment="Center" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Select Folder" Width="100" Grid.Column="0" Click="BtnSelectFolder_Click" />
+            <TextBox x:Name="TxtFolder" IsReadOnly="True" IsReadOnlyCaretVisible="True" Grid.Column="1" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" Margin="10,0,0,0" />
+        </Grid>
+        <ListBox x:Name="LstResult" Grid.Row="2" Margin="0,10,0,0" />
+    </Grid>
+</Window>
